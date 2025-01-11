@@ -24,7 +24,9 @@ export const DataProvider = ({ children }) => {
     try {
       const tmpdata=await api.loadData();
       setLast(
-       tmpdata.events[0] 
+       tmpdata.events.reduce((latestEvent, currentEvent) =>{const latestDate = new Date(latestEvent.date);
+        const currentDate = new Date(currentEvent.date);
+        return currentDate > latestDate ? currentEvent : latestEvent;})
       )
       setData(tmpdata);
     } catch (err) {

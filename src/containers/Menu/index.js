@@ -16,11 +16,13 @@ const Menu = () => (
       </li>
       <li>
         <a href="#notre-equipe">Notre équipe</a>
+        
       </li>
     </ul>
     <Button title="contact" onClick={() => (window.document.location.hash = "#contact")}>
       Contact
     </Button>
+    
   </nav>
 );
 
