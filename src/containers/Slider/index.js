@@ -50,7 +50,7 @@ const Slider = () => {
                   type="radio"
                   name="radio-button"
                   checked={index === radioIdx} // Use index to indicate the current displayed image position
-                  readOnly // Added to prevent user from modifying the radio button
+                  readOnly // Added to prevent user from modifying the phase 
                 />
               ))}
             </div>
